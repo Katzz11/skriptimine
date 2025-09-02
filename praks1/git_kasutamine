@@ -3,6 +3,12 @@ installi - apt install git
 tavakasutajana:
 esmakordselt:
 
+b) git remote kontroll
+git remote -v
+
+a)pane fail jälgimisele:
+git add failinimi
+
 a) seadista - maara kasutajanimi, emal, editor
 git config --global user.name "Katriin Poska"
 git config --global user.email katriin.poska@voco.ee
