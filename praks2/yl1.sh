@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# see skript tervitab kasutajat
+# tervitab kasutajat
 
-echo "tere, katriin"
+echo -n "Tere,"
 
-# väljastab ter ilma reavahetuseta
+#Tekitab kasutajanimi ja muuda esimene täht suureks
 
-echo "tere,"
+username=$(whoami)
 
-# väljastab kasutajanimi
+capitalized=${username^}
 
-echo "$USER"
+echo -n "$capitalized"
 
 # väljastab !
 
