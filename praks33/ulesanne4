@@ -1,0 +1,19 @@
+#!/bin/bash
+# Skript bussiekskursioonide korraldajale
+
+# Küsi kasutajalt reisijate arvu
+read -p "Sisesta grupi suurus (reisijate arv): " reisijad
+
+# Küsi kasutajalt bussikohtade arvu
+read -p "Sisesta ühe bussi kohtade arv: " kohad
+
+# Arvuta täisbusside arv
+taisbussid=$(( reisijad / kohad ))
+
+# Arvuta ülejäänud inimeste arv
+ulejaanud=$(( reisijad % kohad ))
+
+# Väljasta tulemus
+echo "Täisbusse: $taisbussid"
+echo "Ülejäänud inimesi: $ulejaanud"
+
