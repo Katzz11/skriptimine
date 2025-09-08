@@ -1,0 +1,12 @@
+#!/bin/bash
+echo -n "Sisestage ainepunktide arv: "
+read ainepunktid
+
+echo -n "Sisestage nädalate arv: "
+read nadalad
+
+kokku=$((ainepunktid * 26))
+
+nadal_kulu=$(((kokku + nadalad - 1) / nadalad))
+
+echo "Ühe nädala eeldatav ajakulu on $nadal_kulu tundi"
