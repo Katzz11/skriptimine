@@ -1,18 +1,28 @@
 #!/bin/bash
+# Skript kontrollib etteantud arvu paarisust või paaritust.
 
-#paarsuse kontroll
-echo -n "Sisesta suvaline täisarv: " 
-read arv
-
-#arvutame 2-ga jagamine
-jaak=$(( $arv % 2 ))
-# 4 % 2 => 0 -> siis arv on paaris
-# 5 % 2 => 1 -> siis arv on paaritu
-
-if [ $jaak -eq 0 ]
-then
-    echo "$Antud arv on paaris"
-else
-    echo "$Antud arv on paaritu"
+# Kontrolli, kas argumentide arv on täpselt 1
+if [ $# -ne 1 ]; then
+    echo "Käivita see skript koos arvuga, mille paarsust soovid kontrollida. Näiteks: $0 3"
+    exit 1
 fi
-#tingimus kontroll on lõppenud
+
+# Vii argument muutujasse
+arv=$1
+
+# Kontrolli, kas argument on täisarv (valikuline lisa)
+if ! [[ $arv =~ ^-?[0-9]+$ ]]; then
+    echo "Palun sisesta täisarv!"
+    exit 1
+fi
+
+# Arvuta jääk
+jaak=$(( arv % 2 ))
+
+# Kontrolli ja väljasta tulemus
+if [ $jaak -eq 0 ]; then
+    echo "Antud arv on paaris"
+else
+    echo "Antud arv on paaritu"
+fi
+
