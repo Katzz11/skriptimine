@@ -1,0 +1,10 @@
+#!/bin/bash
+
+user=suema
+
+if grep $user /etc/passwd; then
+
+        echo "no such a user $user"
+
+fi
+
