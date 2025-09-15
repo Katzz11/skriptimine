@@ -1,0 +1,25 @@
+#!/bin/bash
+# See skript loeb süsteemi kellaaja ja tervitab kasutajat nimepidi vastavalt ööpäeva ajale.
+
+# Kasutaja nimi
+kasutaja=$USER
+
+# Kellaaeg (ainult tunnid, 0–23)
+tund=$(date +%H)
+
+if [ $tund -ge 6 -a $tund -lt 12 ]
+then
+    echo "Tere hommikust, $kasutaja!"
+elif [ $tund -ge 12 -a $tund -lt 18 ]
+then
+    echo "Tere päevast, $kasutaja!"
+elif [ $tund -ge 18 -a $tund -lt 22 ]
+then
+    echo "Tere õhtust, $kasutaja!"
+elif [ $tund -ge 22 -o $tund -lt 6 ]
+then
+    echo "Head ööd, $kasutaja!"
+else
+    echo "Vigane süsteemi aja lugemine"
+fi
+
