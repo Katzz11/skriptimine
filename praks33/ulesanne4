@@ -11,10 +11,10 @@ read kohad
 #
 # arvutused
 #
-# jagame inimesed busside vahel nii, et kõik kohad bussides oleks täidetud - sellega
+# jagame inimesed busside vahel nii, et kõik kohad bussides oleks täidetud - se>
 # saame teada, palju busse on vaja
 bussid=$(($reisijad / $kohad))
-# vaatame, palju on need, kes ei saanud koha bussides - need on üle jäänud reisijad,
+# vaatame, palju on need, kes ei saanud koha bussides - need on üle jäänud reis>
 # ehk jäägid, kui kõik kohad on täidetud
 ylejaanud=$(($reisijad % $kohad))
 # kui on olemas ülejäänud, tuleb suurendada busside arv 1 võrra
