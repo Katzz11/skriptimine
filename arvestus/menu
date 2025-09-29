@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Katriin Poska
+# skripti nimi-menu
+# Väljastab kasutajale menüü ja laseb valida
+
+# Menüü valikud
+echo "Vali oma söök:"
+echo "1) liha ja kartulid"
+echo "2) kala ja krõpsud"
+echo "3) supp ja salat"
+echo ""
+
+# Kasjutaja valik
+read -p "Tee oma valik (1 või 2 või 3): " valik
+
+case $valik in
+    1)
+        echo ""
+        echo "Väga maitsev, aga jälgi oma tervist!"
+        echo "Head isu!"
+        ;;
+    2)
+        echo ""
+        echo "Brititoit on maitsev!"
+        echo "Head isu!"
+        ;;
+    3)
+        echo ""
+        echo "Nii tervislik ja igav..."
+        echo "Head isu!"
+        ;;
+    *)
+        echo ""
+        echo "Vale sisestus! Palun käivita skript uuesti ja vali 1, 2 või 3."
+        ;;
+esac
