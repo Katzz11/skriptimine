@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Katriin Poska
+# Skripti nimi: kujund
+# Ülesande kirjeldus:
+#   Skript küsib kasutajalt kujundi ridade arvu ja väljastab
+#   vastava arvu ridasid, kus iga järgmine rida on ühe tärni võrra lühem.
+#
+
+# Küsib kasutajalt sisend 
+read -p "Sisesta ridade arv: " readarv
+
+echo ""   # tühi rida, et väljund oleks loetavam
+
+# Kujundi genereerimine
+for (( i=$readarv; i>0; i-- ))
+do
+    # igas reas trüki i tärni
+    for (( j=1; j<=i; j++ ))
+    do
+        echo -n "* "
+    done
+    echo ""   # reavahetus pärast iga rida
+done
